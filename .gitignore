@@ -1,0 +1,6 @@
+tendermint-sandbox
+/data
+/tmhome/data/*.db
+/tmhome/data/priv_validator_state.json
+/vendor
+/js/node_modules
