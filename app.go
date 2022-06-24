@@ -27,7 +27,7 @@ func (app *SandboxApp) DeliverTx(req abcitypes.RequestDeliverTx) abcitypes.Respo
 func (app *SandboxApp) CheckTx(req abcitypes.RequestCheckTx) abcitypes.ResponseCheckTx {
 	code, gas := app.estimateTx(req.Tx)
 	fmt.Printf("CheckTx Gas = %d\n", gas)
-	return abcitypes.ResponseCheckTx{Code: code, GasWanted: gas}
+	return abcitypes.ResponseCheckTx{Code: code, GasWanted: gas, Priority: gas}
 }
 
 func (SandboxApp) EndBlock(req abcitypes.RequestEndBlock) abcitypes.ResponseEndBlock {
